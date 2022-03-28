@@ -1,0 +1,70 @@
+/* Custom fonts (Grotesk) */
+@font-face {
+  font-family: "Grotesk Black";
+  src: url("RightGrotesk-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Grotesk Dark";
+  src: url("RightGrotesk-Dark.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Grotesk Medium";
+  src: url("RightGrotesk-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Grotesk NarrowBlack";
+  src: url("RightGrotesk-NarrowBlack.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Grotesk TightBlack";
+  src: url("RightGrotesk-TightBlack.woff") format("woff");
+}
+
+/* Custom Styling */
+
+.collection__title .h2 {
+  font-family: "Grotesk Black";
+  font-size: calc(var(--font-heading-scale) * 3.89rem);
+  line-height: 3.6rem;
+  vertical-align: center;
+  color: #242424;
+}
+
+.card__heading {
+  text-align: center;
+}
+
+.h5 {
+  font-family: "Grotesk Black";
+  font-size: calc(var(--font-heading-scale) * 1.5rem);
+  text-transform: uppercase;
+  vertical-align: top;
+  color: #242424;
+}
+
+.badge {
+  font-family: "Grotesk NarrowBlack";
+  font-size: calc(var(--font-heading-scale) * 1.5rem) !important;
+  text-transform: uppercase;
+}
+
+.price {
+  text-align: center;
+}
+
+.price-item {
+  font-family: "Grotesk Medium";
+  font-size: calc(var(--font-heading-scale) * 1.5rem) !important;
+}
+
+.price-item--regular {
+  color: #242424 !important;
+}
+
+.price-item--sale {
+  color: #C93022 !important;
+}
