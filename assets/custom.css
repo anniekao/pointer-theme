@@ -26,7 +26,7 @@
 
 /* Custom Styling */
 
-.collection__title .h2 {
+.collection__title h2 {
   font-family: "Grotesk Black";
   font-size: calc(var(--font-heading-scale) * 3.89rem);
   line-height: 3.6rem;
@@ -46,10 +46,19 @@
   color: #242424;
 }
 
+.card__badge {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: -1rem;
+}
+
 .badge {
   font-family: "Grotesk NarrowBlack";
   font-size: calc(var(--font-heading-scale) * 1.5rem) !important;
   text-transform: uppercase;
+  border-radius: 0;
 }
 
 .price {
