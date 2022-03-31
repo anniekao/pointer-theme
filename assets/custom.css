@@ -25,7 +25,6 @@
 }
 
 /* Custom Styling */
-
 .collection__title h2 {
   font-family: "Grotesk Black";
   font-size: calc(var(--font-heading-scale) * 3.89rem);
@@ -55,10 +54,25 @@
 }
 
 .badge {
-  font-family: "Grotesk NarrowBlack";
+  font-family: "Grotesk TightBlack";
   font-size: calc(var(--font-heading-scale) * 1.5rem) !important;
   text-transform: uppercase;
   border-radius: 0;
+}
+
+.color-sold-out {
+  background:#757575;
+  color: #FFFFFF;
+}
+
+.color-on-sale {
+  background: #C93022;
+  color: #FFFFFF;
+}
+
+.color-bestseller {
+  background: #242424;
+  color: #FFFFFF;
 }
 
 .price {
@@ -72,8 +86,4 @@
 
 .price-item--regular {
   color: #242424 !important;
-}
-
-.price-item--sale {
-  color: #C93022 !important;
 }

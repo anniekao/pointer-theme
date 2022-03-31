@@ -104,7 +104,7 @@
     "product": {
       "add_to_cart": "Add to cart",
       "description": "Description",
-      "on_sale": "Sale",
+      "on_sale": "On Sale",
       "product_variants": "Product variants",
       "media": {
         "gallery_viewer": "Gallery Viewer",
@@ -140,6 +140,7 @@
       "share": "Share this product",
       "sold_out": "Sold out",
       "unavailable": "Unavailable",
+      "bestseller": "Best Seller",
       "vendor": "Vendor",
       "video_exit_message": "{{ title }} opens full screen video in same window.",
       "view_full_details": "View full details",
