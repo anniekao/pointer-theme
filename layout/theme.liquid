@@ -210,6 +210,9 @@
     }
     </script>
 
+    {% comment %} Link Swiper's CSS {% endcomment %}
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
   </head>
 
   <body class="gradient">
@@ -260,5 +263,38 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    {% comment %} Swiper JS {% endcomment %}
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    {% comment %} Initialize Swiper {% endcomment %}
+    <script>
+      const swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        slidesOffsetBefore: 32,
+        spaceBetween: 24,
+        grabCursor: true,
+        keyboard: {
+          enabled: true,
+        },
+        breakpoints: {
+          590: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            slidesOffsetBefore: 80
+          },
+          956: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            slidesOffsetBefore: 80
+          },
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }
+      });
+
+    </script>
   </body>
 </html>

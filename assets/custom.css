@@ -25,12 +25,24 @@
 }
 
 /* Custom Styling */
+
+.collection__title {
+  padding-left: 8rem !important;
+}
+
+@media screen and (max-width: 589px) {
+  .collection__title {
+    padding-left: 3.2rem !important;
+  }
+}
+
 .collection__title h2 {
   font-family: "Grotesk Black";
-  font-size: calc(var(--font-heading-scale) * 3.89rem);
+  font-size: 6.2rem;
   line-height: 3.6rem;
   vertical-align: center;
   color: #242424;
+  margin-bottom: 6.2rem !important;
 }
 
 .card__heading {
@@ -39,9 +51,8 @@
 
 .h5 {
   font-family: "Grotesk Black";
-  font-size: calc(var(--font-heading-scale) * 1.5rem);
+  font-size: 2.4rem;
   text-transform: uppercase;
-  vertical-align: top;
   color: #242424;
 }
 
@@ -50,12 +61,13 @@
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  bottom: -1rem;
+  bottom: -1.5rem;
+  white-space: nowrap;
 }
 
 .badge {
   font-family: "Grotesk TightBlack";
-  font-size: calc(var(--font-heading-scale) * 1.5rem) !important;
+  font-size: 2.4rem !important;
   text-transform: uppercase;
   border-radius: 0;
 }
@@ -81,9 +93,79 @@
 
 .price-item {
   font-family: "Grotesk Medium";
-  font-size: calc(var(--font-heading-scale) * 1.5rem) !important;
+  font-size: 2.4rem !important;
 }
 
 .price-item--regular {
   color: #242424 !important;
+}
+
+.price-item--sale {
+  color:#C93022;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-family: 'none' !important;
+  content: '' !important;
+}
+
+.slide-next, .slide-prev {
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  width: 4rem !important;
+  height: 4rem !important;
+  margin-top: calc(0x - (var(--swiper-navigation-size) / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF !important;
+}
+
+.slide-prev {
+  background-image: url('prev-button.svg');
+  left: 2rem;
+}
+
+.slide-prev:disabled::after {
+  opacity: 0.5;
+}
+
+.slide-next {
+  background-image: url('next-button.svg');
+  right: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .collection__title h2 {
+    font-size: 4.8rem;
+    margin-bottom: 4.8rem !important;
+  }
+
+  .badge {
+    font-size: 1.8rem !important;
+  }
+
+  .h5 {
+    font-size: 1.8rem;
+  }
+
+  .price-item {
+    font-size: 1.8rem !important;
+  }
 }
