@@ -50,6 +50,9 @@
           %}
         </div>
       {%- endfor -%}
+      <div class="swiper-slide last-slide">
+        <a href="{{ section.settings.collection.url }}">View All {{ collection.title }}</a>
+      </div>
     </div>
     {% comment %} Empty span elements in button divs needed for icons to appear {% endcomment %}
     <div class="swiper-button-prev slide-prev">
