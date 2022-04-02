@@ -271,8 +271,6 @@
     <script>
       const swiper = new Swiper(".swiper", {
         slidesPerView: 1,
-        slidesOffsetBefore: 32,
-        spaceBetween: 24,
         grabCursor: true,
         keyboard: {
           enabled: true,
@@ -281,12 +279,14 @@
           590: {
             slidesPerView: 2,
             slidesPerGroup: 2,
-            slidesOffsetBefore: 80
+            slidesOffsetBefore: 80,
+            spaceBetween: 24
           },
           956: {
             slidesPerView: 3,
-            slidesPerGroup: 3,
-            slidesOffsetBefore: 80
+            slidesPerGroup: 2,
+            slidesOffsetBefore: 80,
+            spaceBetween: 24
           },
         },
         navigation: {

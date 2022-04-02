@@ -6,30 +6,12 @@
 
 <noscript>{{ 'template-collection.css' | asset_url | stylesheet_tag }}</noscript>
 
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-
 {%- liquid
   assign collection = section.settings.collection
-
-  assign show_mobile_slider = true
-  assign show_desktop_slider = true
 -%}
 
-
 <div class="collection">
-  <div class="collection__title title-wrapper title-wrapper--no-top-margin {% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
+  <div class="collection__title">
     {%- if collection.title != blank -%}
       <h2 class="title">{{ collection.title | escape }}</h2>
     {%- endif -%}

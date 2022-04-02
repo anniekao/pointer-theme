@@ -24,23 +24,28 @@
   src: url("RightGrotesk-TightBlack.woff") format("woff");
 }
 
-/* Custom Styling */
+:root {
+  /* Responsive Typography */
+  --fs-l: clamp(4.8rem, 8vw + 1rem, 6.2rem);
+  --fs-400-desktop: 2.4rem;
+  --fs-400-mobile: 2.2rem;
 
+  /* Colours */
+  --black: #242424;
+  --red: #C93022;
+  --grey: #757575;
+  --white: #FFFFFF;
+}
+
+/* Custom Styling */
 .collection__title {
   padding-left: 8rem !important;
 }
 
-@media screen and (max-width: 589px) {
-  .collection__title {
-    padding-left: 3.2rem !important;
-  }
-}
-
 .collection__title h2 {
   font-family: "Grotesk Black";
-  font-size: 6.2rem;
+  font-size: var(--fs-l);
   line-height: 3.6rem;
-  vertical-align: center;
   color: #242424;
   margin-bottom: 6.2rem !important;
 }
@@ -51,7 +56,7 @@
 
 .h5 {
   font-family: "Grotesk Black";
-  font-size: 2.4rem;
+  font-size: var(--fs-400-desktop);
   text-transform: uppercase;
   color: #242424;
 }
@@ -67,24 +72,24 @@
 
 .badge {
   font-family: "Grotesk TightBlack";
-  font-size: 2.4rem !important;
+  font-size: var(--fs-400-desktop);
   text-transform: uppercase;
   border-radius: 0;
 }
 
 .color-sold-out {
-  background:#757575;
-  color: #FFFFFF;
+  background:var(--grey);
+  color: var(--white);
 }
 
 .color-on-sale {
-  background: #C93022;
-  color: #FFFFFF;
+  background: var(--red);
+  color: var(--white);
 }
 
 .color-bestseller {
-  background: #242424;
-  color: #FFFFFF;
+  background: var(--black) !important;
+  color: var(--white);
 }
 
 .price {
@@ -93,15 +98,16 @@
 
 .price-item {
   font-family: "Grotesk Medium";
-  font-size: 2.4rem !important;
+  font-size: var(--fs-400-desktop) !important;
 }
 
 .price-item--regular {
   color: #242424 !important;
+  font-size: var(--fs-400-desktop) !important;
 }
 
 .price-item--sale {
-  color:#C93022;
+  color: var(--red);
 }
 
 .swiper-slide {
@@ -123,22 +129,13 @@
 }
 
 .slide-next, .slide-prev {
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 50%;
   width: 4rem !important;
   height: 4rem !important;
-  margin-top: calc(0x - (var(--swiper-navigation-size) / 2));
-  z-index: 10;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFFFFF !important;
 }
 
 .slide-prev {
   background-image: url('prev-button.svg');
+  background-repeat: no-repeat;
   left: 2rem;
 }
 
@@ -148,6 +145,7 @@
 
 .slide-next {
   background-image: url('next-button.svg');
+  background-repeat: no-repeat;
   right: 2rem;
 }
 
@@ -157,8 +155,8 @@
 
 .last-slide a {
   font-family: 'Grotesk NarrowBlack';
-  font-size: 2.4rem;
-  color: #242424;
+  font-size: var(--fs-400-desktop);
+  color: var(--black);
   letter-spacing: 2px;
   text-align: center;
   text-decoration: none;
@@ -168,21 +166,30 @@
   text-decoration: underline;
 }
 
+/* Media Queries */
+@media screen and (max-width: 589px) {
+  .collection__title {
+    padding-left: 3.2rem !important;
+  }
+
+  .card-wrapper {
+    padding: 2rem;
+  }
+
+  .badge,
+  .h5,
+  .price-item,
+  .last-slide a {
+    font-size: var(--fs-400-mobile) !important;
+  }
+
+  .last-slide a {
+    text-decoration: underline;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .collection__title h2 {
-    font-size: 4.8rem;
-    margin-bottom: 4.8rem !important;
-  }
-
-  .badge {
-    font-size: 1.8rem !important;
-  }
-
-  .h5 {
-    font-size: 1.8rem;
-  }
-
-  .price-item {
-    font-size: 1.8rem !important;
+    margin-bottom: 1rem !important;
   }
 }
